@@ -10,8 +10,8 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 # AI Configuration
 ai_api_key = os.environ.get("AI_API_KEY")
-ai_base_url = os.environ.get("AI_BASE_URL", "https://open.bigmodel.cn/api/paas/v4/")
-ai_model = os.environ.get("AI_MODEL", "glm-4-flash")
+ai_base_url = os.environ.get("AI_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
+ai_model = os.environ.get("AI_MODEL", "gemini-1.5-flash")
 
 if ai_api_key:
     client = AsyncOpenAI(api_key=ai_api_key, base_url=ai_base_url)
